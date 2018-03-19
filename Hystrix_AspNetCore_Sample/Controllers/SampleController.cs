@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Hystrix.Dotnet;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Hystrix.Dotnet;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Hystrix_AspNetCore_Sample.Controllers
 {
