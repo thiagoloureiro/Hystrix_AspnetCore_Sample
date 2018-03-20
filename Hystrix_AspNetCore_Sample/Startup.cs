@@ -22,7 +22,13 @@ namespace Hystrix_AspNetCore_Sample
             services.AddMvc();
             services.AddHystrix();
 
-            services.Configure<HystrixOptions>(options => Configuration.GetSection("Hystrix").Bind(options));
+            services.Configure<HystrixOptions>(ConfigureOptions);
+        }
+
+        private void ConfigureOptions(HystrixOptions options)
+        {
+            Configuration.GetSection("Hystrix").Bind(options);
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
