@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  hystrix_aspnetcore_sample:
+    image: hystrixaspnetcoresample
+    build:
+      context: .
+      dockerfile: Hystrix_AspNetCore_Sample/Dockerfile

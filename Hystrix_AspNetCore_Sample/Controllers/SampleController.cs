@@ -24,7 +24,6 @@ namespace Hystrix_AspNetCore_Sample.Controllers
                 async () =>
                 {
                     var rnd = new Random();
-                    await Task.Delay(rnd.Next(500, 1000));
 
                     if (rnd.Next(4) == 0) // Quando o valor for zero falha a retorna o fallback ao invés de cair na exception e retorar um server error
                     {
